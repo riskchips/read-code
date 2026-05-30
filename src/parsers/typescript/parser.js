@@ -1,41 +1,52 @@
 const fs = require("fs");
-
-const createAST = require("../shared/ast");
+const parser = require("@babel/parser");
 
 const extractInterfaces = require("./interfaces");
 const extractTypes = require("./types");
 const extractEnums = require("./enums");
 
-const extractImports = require("../javascript/imports");
-const extractExports = require("../javascript/exports");
-const extractFunctions = require("../javascript/functions");
-const extractClasses = require("../javascript/classes");
+function parseTypeScript(
+    file
+) {
+    const content =
+        fs.readFileSync(
+            file,
+            "utf8"
+        );
 
-function parseTypeScript(file) {
-    const source = fs.readFileSync(
-        file,
-        "utf8"
-    );
+    const ast =
+        parser.parse(
+            content,
+            {
+                sourceType:
+                    "unambiguous",
 
-    const ast = createAST(source);
+                plugins: [
+                    "typescript",
+                    "jsx"
+                ]
+            }
+        );
 
     return {
         file,
 
-        imports: extractImports(ast),
+        interfaces:
+            extractInterfaces(
+                ast
+            ),
 
-        exports: extractExports(ast),
+        types:
+            extractTypes(
+                ast
+            ),
 
-        functions: extractFunctions(ast),
-
-        classes: extractClasses(ast),
-
-        interfaces: extractInterfaces(ast),
-
-        types: extractTypes(ast),
-
-        enums: extractEnums(ast)
+        enums:
+            extractEnums(
+                ast
+            )
     };
 }
 
-module.exports = parseTypeScript;
+module.exports =
+    parseTypeScript;

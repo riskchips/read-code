@@ -1,19 +1,94 @@
-const traverse = require("../shared/traverse");
+const traverse = require(
+    "../shared/traverse"
+);
 
-function extractClasses(ast) {
+function getSnippet(
+    lines,
+    start,
+    end
+) {
+    if (
+        !start ||
+        !end
+    ) {
+        return null;
+    }
+
+    return lines
+        .slice(
+            start - 1,
+            end
+        )
+        .join("\n");
+}
+
+function extractClasses(
+    ast,
+    lines = []
+) {
     const classes = [];
 
     traverse(ast, {
-        ClassDeclaration(path) {
+        ClassDeclaration(
+            path
+        ) {
+            const methods =
+                [];
+
+            for (const body of path
+                .node.body
+                .body) {
+                if (
+                    body.type !==
+                    "ClassMethod"
+                ) {
+                    continue;
+                }
+
+                methods.push({
+                    name:
+                        body.key
+                            ?.name,
+
+                    async:
+                        body.async,
+
+                    static:
+                        body.static
+                });
+            }
+
+            const start =
+                path.node.loc
+                    ?.start
+                    ?.line ||
+                null;
+
+            const end =
+                path.node.loc
+                    ?.end
+                    ?.line ||
+                null;
+
             classes.push({
-                name: path.node.id?.name || "anonymous",
-                methods: path.node.body.body
-                    .filter(node => node.type === "ClassMethod")
-                    .map(method => ({
-                        name: method.key?.name || "unknown",
-                        async: method.async,
-                        static: method.static
-                    }))
+                name:
+                    path.node.id
+                        ?.name,
+
+                methods,
+
+                startLine:
+                    start,
+
+                endLine:
+                    end,
+
+                snippet:
+                    getSnippet(
+                        lines,
+                        start,
+                        end
+                    )
             });
         }
     });
@@ -21,4 +96,5 @@ function extractClasses(ast) {
     return classes;
 }
 
-module.exports = extractClasses;
+module.exports =
+    extractClasses;

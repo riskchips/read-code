@@ -1,49 +1,62 @@
 const fs = require("fs");
+const parser = require("@babel/parser");
 
-const createAST = require("../shared/ast");
-
-const extractComponents =
-    require("./components");
-
-const extractHooks =
-    require("./hooks");
-
-const extractProps =
-    require("./props");
-
-const extractRoutes =
-    require("./routes");
-
-const extractImports =
-    require("../javascript/imports");
-
-const extractExports =
-    require("../javascript/exports");
+const extractComponents = require("./components");
+const extractHooks = require("./hooks");
+const extractProps = require("./props");
+const extractRoutes = require("./routes");
 
 function parseReact(file) {
-    const source = fs.readFileSync(
-        file,
-        "utf8"
-    );
+    const content =
+        fs.readFileSync(
+            file,
+            "utf8"
+        );
 
-    const ast = createAST(source);
+    const lines =
+        content.split(
+            /\r?\n/
+        );
+
+    const ast =
+        parser.parse(
+            content,
+            {
+                sourceType:
+                    "unambiguous",
+
+                plugins: [
+                    "jsx",
+                    "typescript"
+                ]
+            }
+        );
 
     return {
         file,
 
-        imports: extractImports(ast),
-
-        exports: extractExports(ast),
-
         components:
-            extractComponents(ast),
+            extractComponents(
+                ast,
+                lines
+            ),
 
-        hooks: extractHooks(ast),
+        hooks:
+            extractHooks(
+                ast
+            ),
 
-        props: extractProps(ast),
+        props:
+            extractProps(
+                ast
+            ),
 
-        routes: extractRoutes(ast)
+        routes:
+            extractRoutes(
+                ast
+            )
     };
 }
 
-module.exports = parseReact;
+module.exports =
+    parseReact;

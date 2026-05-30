@@ -1,59 +1,96 @@
-const {
-    createEmbedding,
-    similarity
-} = require("./embeddings");
+function search(
+    project,
+    query
+) {
+    const q =
+        String(query)
+            .toLowerCase();
 
-function buildSearchIndex(project) {
-    const entries = [];
+    const results =
+        [];
 
-    const sources = [
-        ...(project.analysis?.functions || []),
-        ...(project.analysis?.classes || []),
-        ...(project.analysis?.components || []),
-        ...(project.analysis?.interfaces || []),
-        ...(project.analysis?.types || []),
-        ...(project.analysis?.enums || [])
-    ];
+    const symbols =
+        project.symbols ||
+        {};
 
-    for (const item of sources) {
-        const text = JSON.stringify(item);
+    for (const [
+        name,
+        symbol
+    ] of Object.entries(
+        symbols
+    )) {
+        const text = [
+            name,
+            symbol.file,
+            symbol.type,
+            symbol.snippet
+        ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
 
-        entries.push({
-            type: item.type || "symbol",
-            data: item,
-            embedding: createEmbedding(text)
-        });
+        if (
+            text.includes(q)
+        ) {
+            results.push({
+                score: 100,
+                symbol:
+                    name,
+                ...symbol
+            });
+        }
     }
 
-    return entries;
-}
+    const functions =
+        project.analysis
+            ?.functions ||
+        [];
 
-function search(project, query) {
-    const queryEmbedding =
-        createEmbedding(query);
+    for (const fn of functions) {
+        const text = JSON.stringify(
+            fn
+        ).toLowerCase();
 
-    const index =
-        buildSearchIndex(project);
-
-    const results = [];
-
-    for (const entry of index) {
-        results.push({
-            score: similarity(
-                queryEmbedding,
-                entry.embedding
-            ),
-            data: entry.data,
-            type: entry.type
-        });
+        if (
+            text.includes(q)
+        ) {
+            results.push({
+                score: 50,
+                type:
+                    "function",
+                data: fn
+            });
+        }
     }
 
-    results.sort(
+    const classes =
+        project.analysis
+            ?.classes ||
+        [];
+
+    for (const cls of classes) {
+        const text = JSON.stringify(
+            cls
+        ).toLowerCase();
+
+        if (
+            text.includes(q)
+        ) {
+            results.push({
+                score: 50,
+                type:
+                    "class",
+                data: cls
+            });
+        }
+    }
+
+    return results.sort(
         (a, b) =>
-            b.score - a.score
+            b.score -
+            a.score
     );
-
-    return results.slice(0, 20);
 }
 
-module.exports = search;
+module.exports =
+    search;

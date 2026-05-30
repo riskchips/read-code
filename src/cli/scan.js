@@ -433,14 +433,15 @@ function scan(args = []) {
         );
 
     const result =
-        aiContext({
-            project,
-            frameworks,
-            statistics,
-            tree,
-            analyzers:
-                analyzerResults
-        });
+    aiContext({
+        project,
+        frameworks,
+        statistics,
+        tree,
+        analyzers:
+            analyzerResults,
+        parsedFiles
+    });
 
     result.analysis =
         analysis;

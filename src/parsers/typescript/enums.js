@@ -2,8 +2,11 @@ const traverse = require(
     "../shared/traverse"
 );
 
-function extractEnums(ast) {
-    const enums = [];
+function extractEnums(
+    ast
+) {
+    const enums =
+        [];
 
     traverse(ast, {
         TSEnumDeclaration(
@@ -12,15 +15,29 @@ function extractEnums(ast) {
             enums.push({
                 name:
                     path.node.id
-                        ?.name || null,
+                        ?.name,
 
                 members:
-                    path.node.members.map(
-                        member =>
-                            member.id
-                                ?.name ||
-                            null
-                    )
+                    path.node
+                        .members
+                        .map(
+                            member =>
+                                member
+                                    .id
+                                    ?.name
+                        ),
+
+                startLine:
+                    path.node.loc
+                        ?.start
+                        ?.line ||
+                    null,
+
+                endLine:
+                    path.node.loc
+                        ?.end
+                        ?.line ||
+                    null
             });
         }
     });

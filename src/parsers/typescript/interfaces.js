@@ -1,16 +1,33 @@
-const traverse = require("../shared/traverse");
+const traverse = require(
+    "../shared/traverse"
+);
 
-function extractInterfaces(ast) {
-    const interfaces = [];
+function extractInterfaces(
+    ast
+) {
+    const interfaces =
+        [];
 
     traverse(ast, {
-        TSInterfaceDeclaration(path) {
+        TSInterfaceDeclaration(
+            path
+        ) {
             interfaces.push({
-                name: path.node.id.name,
-                properties: path.node.body.body.map(prop => ({
-                    name: prop.key?.name || null,
-                    optional: prop.optional || false
-                }))
+                name:
+                    path.node.id
+                        ?.name,
+
+                startLine:
+                    path.node.loc
+                        ?.start
+                        ?.line ||
+                    null,
+
+                endLine:
+                    path.node.loc
+                        ?.end
+                        ?.line ||
+                    null
             });
         }
     });
@@ -18,4 +35,5 @@ function extractInterfaces(ast) {
     return interfaces;
 }
 
-module.exports = extractInterfaces;
+module.exports =
+    extractInterfaces;

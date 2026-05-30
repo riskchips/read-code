@@ -1,12 +1,19 @@
-const projectSummary =
-    require(
-        "./projectSummary"
-    );
+const projectSummary = require(
+    "./projectSummary"
+);
 
-function aiContext(data) {
+const createSymbolTable = require(
+    "../parsers/shared/symbols"
+);
+
+function aiContext(data = {}) {
     const summary =
-        projectSummary(
-            data
+        projectSummary(data);
+
+    const symbols =
+        createSymbolTable(
+            data.parsedFiles ||
+                []
         );
 
     return {
@@ -14,19 +21,23 @@ function aiContext(data) {
             new Date().toISOString(),
 
         project:
-            data.project,
+            data.project || {},
 
         frameworks:
-            data.frameworks,
+            data.frameworks ||
+            [],
 
         statistics:
-            data.statistics,
+            data.statistics ||
+            {},
 
         tree:
-            data.tree,
+            data.tree || {},
 
         projectSummary:
             summary,
+
+        symbols,
 
         summary: {
             phase:

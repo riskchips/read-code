@@ -1,4 +1,6 @@
-const search = require("./search");
+const search = require(
+    "./search"
+);
 
 function queryEngine(
     project,
@@ -6,88 +8,132 @@ function queryEngine(
 ) {
     const q =
         String(question)
-            .toLowerCase()
-            .trim();
+            .toLowerCase();
 
     if (
-        q.includes("framework")
+        q.includes(
+            "framework"
+        )
     ) {
         return {
-            type: "frameworks",
+            type:
+                "frameworks",
+
             answer:
                 project.frameworks
         };
     }
 
     if (
-        q.includes("feature")
+        q.includes(
+            "feature"
+        )
     ) {
         return {
-            type: "features",
+            type:
+                "features",
+
             answer:
-                project.analyzers
-                    ?.features || []
+                project
+                    .analyzers
+                    ?.features ||
+                []
         };
     }
 
     if (
-        q.includes("database")
+        q.includes(
+            "route"
+        )
     ) {
         return {
-            type: "database",
+            type:
+                "routes",
+
             answer:
-                project.analyzers
-                    ?.database || []
+                project
+                    .analyzers
+                    ?.routes ||
+                []
         };
     }
 
     if (
-        q.includes("route")
+        q.includes(
+            "architecture"
+        )
     ) {
         return {
-            type: "routes",
-            answer:
-                project.analyzers
-                    ?.routes || []
-        };
-    }
+            type:
+                "architecture",
 
-    if (
-        q.includes("controller")
-    ) {
-        return {
-            type: "controllers",
             answer:
-                project.analyzers
-                    ?.controllers || []
-        };
-    }
-
-    if (
-        q.includes("architecture")
-    ) {
-        return {
-            type: "architecture",
-            answer:
-                project.analyzers
+                project
+                    .analyzers
                     ?.architecture ||
                 {}
         };
     }
 
     if (
-        q.includes("summary") ||
-        q.includes("explain")
+        q.startsWith(
+            "where is "
+        )
     ) {
+        const symbol =
+            question
+                .replace(
+                    /where is/i,
+                    ""
+                )
+                .trim();
+
         return {
-            type: "summary",
+            type:
+                "symbol",
+
             answer:
-                project.projectSummary
+                project
+                    .symbols?.[
+                    symbol
+                ] || null
+        };
+    }
+
+    if (
+        q.startsWith(
+            "show code for "
+        )
+    ) {
+        const symbol =
+            question
+                .replace(
+                    /show code for/i,
+                    ""
+                )
+                .trim();
+
+        const result =
+            project
+                .symbols?.[
+                symbol
+            ];
+
+        return {
+            type:
+                "snippet",
+
+            answer:
+                result
+                    ?.snippet ||
+                null
         };
     }
 
     return {
-        type: "search",
+        type:
+            "search",
+
         answer:
             search(
                 project,

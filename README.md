@@ -1,174 +1,331 @@
 # read-code
 
-**Author:** Risk Chips
-
-Turn any JavaScript, TypeScript, React, JSX, or TSX codebase into a structured AI-ready JSON knowledge graph.
-
-`read-code` scans a project, understands its structure, extracts functions, classes, components, routes, architecture, dependencies, and generates a portable JSON context that can be consumed by AI systems without repeatedly explaining the project.
+```bash
+npm install -g read-code
+```
 
 ---
 
-# Features
+# 🚀 read-code
 
-## Project Scanning
+### Turn Any Codebase Into AI Context
 
-Scans:
+**read-code** is an advanced code intelligence engine that scans entire projects, understands architecture, extracts code relationships, builds knowledge graphs, and generates AI-ready JSON context.
 
-* JavaScript (.js)
-* TypeScript (.ts)
-* React (.jsx)
-* TSX (.tsx)
-* JSON (.json)
-* Markdown (.md)
+Instead of uploading hundreds of files and repeatedly explaining your project to AI, simply run:
 
-Builds:
+```bash
+read-code scan
+```
 
-* Project Tree
-* Framework Detection
-* Statistics
-* Dependency Graph
-* Knowledge Graph
-* AI Context
+and upload the generated context.
 
 ---
 
-## JavaScript Analysis
+## Created By
 
-Extracts:
+**Risk Chips**
 
-* Imports
-* Exports
-* Functions
-* Classes
-* Require Statements
+---
 
-Example:
+# Why read-code?
+
+Most developers repeatedly tell AI:
+
+* What framework is used
+* Where routes are located
+* Which database is connected
+* How authentication works
+* Which files contain business logic
+* How components are connected
+* What the architecture looks like
+
+read-code automatically discovers and exports all of that information.
+
+---
+
+# Example Workflow
+
+Without read-code:
+
+```text
+Upload 500 files
+Explain project
+Explain architecture
+Explain auth
+Explain routes
+Explain database
+Explain business logic
+Repeat every conversation
+```
+
+With read-code:
+
+```text
+read-code scan
+↓
+project context generated
+↓
+Upload JSON
+↓
+AI understands project
+```
+
+---
+
+# Supported Languages
+
+## JavaScript
 
 ```js
-import express from "express";
-
-export async function login() {}
-
-class UserService {}
+function login() {}
 ```
 
----
-
-## React Analysis
-
-Extracts:
-
-* Components
-* Hooks
-* Props
-
-Example:
-
-```jsx
-function Navbar({ user }) {
-    const [count] = useState(0);
-
-    return <div>{user}</div>;
-}
-```
-
----
-
-## TypeScript Analysis
-
-Extracts:
-
-* Interfaces
-* Types
-* Enums
-
-Example:
+## TypeScript
 
 ```ts
 interface User {}
+```
 
-type Role = "admin";
+## React
 
-enum Status {
-    ACTIVE
+```jsx
+function Navbar() {}
+```
+
+## JSX
+
+```jsx
+<App />
+```
+
+## TSX
+
+```tsx
+<App />
+```
+
+---
+
+# Core Features
+
+## Project Scanner
+
+Scans:
+
+```text
+.js
+.ts
+.jsx
+.tsx
+.json
+.md
+```
+
+Builds:
+
+```text
+Project Tree
+Project Statistics
+Framework Detection
+AI Context
+```
+
+---
+
+## JavaScript Intelligence
+
+Extracts:
+
+```text
+Functions
+Classes
+Imports
+Exports
+Arrow Functions
+```
+
+---
+
+## TypeScript Intelligence
+
+Extracts:
+
+```text
+Interfaces
+Types
+Enums
+```
+
+---
+
+## React Intelligence
+
+Extracts:
+
+```text
+Components
+Hooks
+Props
+Routes
+```
+
+---
+
+## Symbol Intelligence
+
+Builds:
+
+```text
+Function Symbols
+Class Symbols
+Component Symbols
+Type Symbols
+Enum Symbols
+```
+
+Example:
+
+```json
+{
+  "login": {
+    "type": "function",
+    "file": "src/auth/login.js",
+    "startLine": 10,
+    "endLine": 50
+  }
 }
 ```
 
 ---
 
-## Graph Engine
+## Source Snippet Extraction
+
+Stores source snippets for AI understanding.
+
+Example:
+
+```json
+{
+  "name": "login",
+  "snippet": "async function login(req,res){...}"
+}
+```
+
+This significantly improves:
+
+```text
+Bug Fixing
+Refactoring
+Code Generation
+```
+
+---
+
+# Graph Engine
 
 Builds:
 
-* Dependency Graph
-* Call Graph
-* Component Graph
-* Knowledge Graph
+## Dependency Graph
+
+```text
+File → Imports
+```
+
+## Call Graph
+
+```text
+Function → Function
+```
+
+## Component Graph
+
+```text
+Component → Component
+```
+
+## Knowledge Graph
+
+```text
+Project → Relationships
+```
 
 ---
 
-## Architecture Analysis
+# Architecture Analysis
 
 Detects:
 
-* MVC
-* Component Based
-* Service Layers
-* Repository Patterns
+```text
+MVC
+Layered Architecture
+Repository Pattern
+Service Pattern
+Component Architecture
+```
 
 ---
 
-## Database Detection
+# Database Analysis
 
 Detects:
 
-* MongoDB
-* PostgreSQL
-* MySQL
-* SQLite
-* Redis
+```text
+MongoDB
+PostgreSQL
+MySQL
+SQLite
+Redis
+```
 
 ---
 
-## ORM Detection
+# ORM Analysis
 
 Detects:
 
-* Prisma
-* Mongoose
-* Sequelize
-* TypeORM
+```text
+Prisma
+Mongoose
+Sequelize
+TypeORM
+```
 
 ---
 
-## Authentication Detection
+# Authentication Analysis
 
 Detects:
 
-* JWT
-* Passport
-* Auth Libraries
+```text
+JWT
+Passport
+Session Auth
+OAuth
+```
 
 ---
 
-## Feature Detection
+# Feature Detection
 
-Detects:
+Automatically discovers:
 
-* Authentication
-* Dashboard
-* Messaging
-* Payments
-* File Uploads
-* Search
-* Notifications
-* Admin Panels
+```text
+Authentication
+Dashboard
+Payments
+Messaging
+Notifications
+Search
+Admin Panel
+File Upload
+```
 
 ---
 
-## AI Context Generation
+# AI Context Engine
 
-Generates structured project intelligence:
+Produces structured JSON:
 
 ```json
 {
@@ -178,45 +335,22 @@ Generates structured project intelligence:
   "tree": {},
   "analysis": {},
   "graphs": {},
-  "analyzers": {}
+  "analyzers": {},
+  "symbols": {}
 }
-```
-
-Perfect for:
-
-* AI Coding Agents
-* Documentation
-* Architecture Reviews
-* Code Audits
-* Project Understanding
-
----
-
-# Installation
-
-```bash
-npm install -g read-code
-```
-
-or
-
-```bash
-npm install read-code
 ```
 
 ---
 
 # Commands
 
-## Scan Project
+## Scan
 
 ```bash
 read-code scan
 ```
 
-Scans the current project.
-
-Automatically saves:
+Creates:
 
 ```text
 .read-code/latest.json
@@ -224,16 +358,10 @@ Automatically saves:
 
 ---
 
-## Save Scan Output
+## Save Output
 
 ```bash
 read-code scan --savefile project.json
-```
-
-Example:
-
-```bash
-read-code scan --savefile output/project.json
 ```
 
 ---
@@ -248,36 +376,35 @@ Produces minified JSON.
 
 ---
 
-## Exclude Folders
+## Exclude Directories
 
 ```bash
 read-code scan --exclude tests,docs
 ```
 
-Skips:
+Example:
 
-```text
-tests/
-docs/
+```bash
+read-code scan --exclude tests,docs,coverage
 ```
 
 ---
 
-## Combine Multiple Flags
+## Combine Flags
 
 ```bash
-read-code scan --compact --savefile project.json
+read-code scan --compact --savefile output.json
 ```
 
 ```bash
-read-code scan --exclude tests,docs --savefile project.json
+read-code scan --exclude tests,docs --compact
 ```
 
 ```bash
-read-code scan --exclude tests,docs --compact --savefile project.json
+read-code scan --exclude tests,docs --compact --savefile output.json
 ```
 
-Flags work in any order.
+Flags can be used in any order.
 
 ---
 
@@ -290,13 +417,19 @@ read-code query "what frameworks are used"
 Examples:
 
 ```bash
-read-code query "what frameworks are used"
-
 read-code query "show architecture"
 
 read-code query "what routes exist"
 
 read-code query "what features exist"
+
+read-code query "where is login"
+
+read-code query "show code for login"
+
+read-code query "jwt"
+
+read-code query "prisma"
 ```
 
 ---
@@ -307,45 +440,12 @@ read-code query "what features exist"
 read-code explain
 ```
 
-Returns a high-level project summary.
-
 ---
 
 ## Help
 
 ```bash
 read-code --help
-```
-
----
-
-# Output Example
-
-```json
-{
-  "project": {
-    "name": "my-app"
-  },
-
-  "frameworks": [
-    "node",
-    "react"
-  ],
-
-  "statistics": {
-    "files": 127
-  },
-
-  "analysis": {
-    "functions": [],
-    "classes": [],
-    "components": []
-  },
-
-  "graphs": {},
-
-  "analyzers": {}
-}
 ```
 
 ---
@@ -359,7 +459,7 @@ read-code --help
 └── latest.json
 ```
 
-Created automatically after every scan.
+Generated after every scan.
 
 ---
 
@@ -377,57 +477,128 @@ project.json
 
 ---
 
-# Current Roadmap
+# Current AI Capability
 
-## Phase 1
+## Project Understanding
 
-* Scanner
-* Tree Builder
-* Framework Detection
-* Statistics
+```text
+98%
+```
 
-## Phase 2
+## Architecture Understanding
 
-* JavaScript Parser
-* TypeScript Parser
-* React Parser
+```text
+98%
+```
 
-## Phase 3
+## Documentation Generation
 
-* Dependency Graph
-* Call Graph
-* Component Graph
-* Knowledge Graph
+```text
+98%
+```
 
-## Phase 4
+## Dependency Analysis
 
-* Architecture Analysis
-* Database Analysis
-* ORM Analysis
-* Authentication Analysis
-* Feature Detection
+```text
+95%
+```
 
-## Phase 5
+## Refactoring Assistance
 
-* AI Context
-* Search Engine
-* Query Engine
-* Project Intelligence
+```text
+80%
+```
+
+## Bug Localization
+
+```text
+75%
+```
+
+## Code Search
+
+```text
+90%
+```
+
+## AI Readiness
+
+```text
+85%
+```
 
 ---
 
-# Why read-code?
+# Roadmap
 
-Most AI tools require developers to repeatedly explain:
+## Quality Analysis
 
-* Project Structure
-* Frameworks
-* Architecture
-* Routes
-* Database Design
-* Features
+Planned:
 
-`read-code` automatically extracts that information and generates a structured project knowledge base that AI systems can understand immediately.
+```text
+Dead Code Detection
+Circular Dependency Detection
+Duplicate Code Detection
+```
+
+---
+
+## Advanced Intelligence
+
+Planned:
+
+```text
+Cross-File Symbol Tracking
+Reference Tracking
+Semantic Search
+Variable Usage Analysis
+Data Flow Analysis
+Control Flow Analysis
+```
+
+---
+
+## AI Enhancements
+
+Planned:
+
+```text
+Context Compression
+Semantic Embeddings
+AI Memory Packs
+Code Repair Suggestions
+Automatic Refactoring Plans
+```
+
+---
+
+# Example
+
+Generate context:
+
+```bash
+read-code scan --savefile project.json
+```
+
+Ask AI:
+
+```text
+Find authentication flow
+
+Find unused services
+
+Show login implementation
+
+Explain architecture
+
+Suggest refactoring opportunities
+
+Locate JWT validation
+
+Find Prisma usage
+
+Find database entry points
+```
 
 ---
 

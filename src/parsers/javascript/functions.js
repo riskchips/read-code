@@ -1,44 +1,152 @@
-const traverse = require("../shared/traverse");
+const traverse = require(
+    "../shared/traverse"
+);
 
-function extractFunctions(ast) {
-    const functions = [];
+function getSnippet(
+    lines,
+    start,
+    end
+) {
+    if (
+        !start ||
+        !end
+    ) {
+        return null;
+    }
+
+    return lines
+        .slice(
+            start - 1,
+            end
+        )
+        .join("\n");
+}
+
+function extractFunctions(
+    ast,
+    lines = []
+) {
+    const functions =
+        [];
 
     traverse(ast, {
-        FunctionDeclaration(path) {
+        FunctionDeclaration(
+            path
+        ) {
+            const start =
+                path.node.loc
+                    ?.start
+                    ?.line ||
+                null;
+
+            const end =
+                path.node.loc
+                    ?.end
+                    ?.line ||
+                null;
+
             functions.push({
-                name: path.node.id?.name || "anonymous",
-                async: path.node.async,
-                generator: path.node.generator,
-                params: path.node.params.length,
-                type: "declaration"
+                name:
+                    path.node.id
+                        ?.name ||
+                    "anonymous",
+
+                async:
+                    path.node
+                        .async,
+
+                generator:
+                    path.node
+                        .generator,
+
+                params:
+                    path.node
+                        .params
+                        .length,
+
+                type:
+                    "declaration",
+
+                startLine:
+                    start,
+
+                endLine:
+                    end,
+
+                snippet:
+                    getSnippet(
+                        lines,
+                        start,
+                        end
+                    )
             });
         },
 
-        ArrowFunctionExpression(path) {
-            if (!path.parent.id?.name) {
+        VariableDeclarator(
+            path
+        ) {
+            const init =
+                path.node.init;
+
+            if (
+                !init
+            ) {
                 return;
             }
 
-            functions.push({
-                name: path.parent.id.name,
-                async: path.node.async,
-                generator: false,
-                params: path.node.params.length,
-                type: "arrow"
-            });
-        },
-
-        FunctionExpression(path) {
-            if (!path.parent.id?.name) {
+            if (
+                init.type !==
+                    "ArrowFunctionExpression" &&
+                init.type !==
+                    "FunctionExpression"
+            ) {
                 return;
             }
 
+            const start =
+                init.loc
+                    ?.start
+                    ?.line ||
+                null;
+
+            const end =
+                init.loc
+                    ?.end
+                    ?.line ||
+                null;
+
             functions.push({
-                name: path.parent.id.name,
-                async: path.node.async,
-                generator: path.node.generator,
-                params: path.node.params.length,
-                type: "expression"
+                name:
+                    path.node.id
+                        ?.name ||
+                    "anonymous",
+
+                async:
+                    init.async,
+
+                generator:
+                    init.generator ||
+                    false,
+
+                params:
+                    init.params
+                        .length,
+
+                type:
+                    "arrow",
+
+                startLine:
+                    start,
+
+                endLine:
+                    end,
+
+                snippet:
+                    getSnippet(
+                        lines,
+                        start,
+                        end
+                    )
             });
         }
     });
@@ -46,4 +154,5 @@ function extractFunctions(ast) {
     return functions;
 }
 
-module.exports = extractFunctions;
+module.exports =
+    extractFunctions;

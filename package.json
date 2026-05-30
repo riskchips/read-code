@@ -1,6 +1,6 @@
 {
   "name": "read-code",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Universal code intelligence engine",
   "main": "src/index.js",
   "bin": {

@@ -1,18 +1,34 @@
 const fs = require("fs");
+const path = require("path");
 
 const queryEngine = require(
     "../intelligence/queryEngine"
 );
 
-function query(question) {
+function query(
+    question
+) {
     const file =
-        "read-code-output.json";
+        path.join(
+            process.cwd(),
+            ".read-code",
+            "latest.json"
+        );
 
     if (
-        !fs.existsSync(file)
+        !fs.existsSync(
+            file
+        )
     ) {
-        console.error(
-            "run scan first"
+        console.log(
+            JSON.stringify(
+                {
+                    error:
+                        "No scan found. Run read-code scan first."
+                },
+                null,
+                2
+            )
         );
 
         return;
@@ -41,4 +57,5 @@ function query(question) {
     );
 }
 
-module.exports = query;
+module.exports =
+    query;

@@ -2,8 +2,11 @@ const traverse = require(
     "../shared/traverse"
 );
 
-function extractTypes(ast) {
-    const types = [];
+function extractTypes(
+    ast
+) {
+    const types =
+        [];
 
     traverse(ast, {
         TSTypeAliasDeclaration(
@@ -12,7 +15,19 @@ function extractTypes(ast) {
             types.push({
                 name:
                     path.node.id
-                        ?.name || null
+                        ?.name,
+
+                startLine:
+                    path.node.loc
+                        ?.start
+                        ?.line ||
+                    null,
+
+                endLine:
+                    path.node.loc
+                        ?.end
+                        ?.line ||
+                    null
             });
         }
     });

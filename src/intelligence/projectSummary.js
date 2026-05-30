@@ -1,99 +1,73 @@
-function projectSummary(data) {
-    const summary = {
-        project: data.project?.name || null,
+function projectSummary(
+    data = {}
+) {
+    const frameworks =
+        data.frameworks ||
+        [];
 
-        frameworks:
-            data.frameworks || [],
+    const stats =
+        data.statistics ||
+        {};
 
-        statistics:
-            data.statistics || {},
+    const analyzers =
+        data.analyzers ||
+        {};
 
-        architecture:
-            data.analyzers
-                ?.architecture ||
-            {},
+    return {
+        name:
+            data.project
+                ?.name ||
+            "unknown",
 
-        features:
-            data.analyzers
-                ?.features || [],
+        frameworks,
 
-        databases:
-            data.analyzers
-                ?.database || [],
+        totalFiles:
+            stats.files ||
+            0,
 
-        auth:
-            data.analyzers
-                ?.auth || [],
+        languages: {
+            javascript:
+                stats.javascript ||
+                0,
+
+            typescript:
+                stats.typescript ||
+                0,
+
+            jsx:
+                stats.jsx ||
+                0,
+
+            tsx:
+                stats.tsx ||
+                0
+        },
 
         routes:
-            (
-                data.analyzers
-                    ?.routes || []
-            ).length,
+            analyzers
+                .routes
+                ?.length ||
+            0,
 
-        controllers:
-            (
-                data.analyzers
-                    ?.controllers ||
-                []
-            ).length,
+        features:
+            analyzers
+                .features ||
+            [],
 
-        models:
-            (
-                data.analyzers
-                    ?.models || []
-            ).length
+        databases:
+            analyzers
+                .database ||
+            [],
+
+        auth:
+            analyzers.auth ||
+            [],
+
+        architecture:
+            analyzers
+                .architecture ||
+            {}
     };
-
-    summary.description =
-        buildDescription(
-            summary
-        );
-
-    return summary;
-}
-
-function buildDescription(
-    summary
-) {
-    const parts = [];
-
-    parts.push(
-        `Project ${summary.project}`
-    );
-
-    if (
-        summary.frameworks
-            .length
-    ) {
-        parts.push(
-            `uses ${summary.frameworks.join(
-                ", "
-            )}`
-        );
-    }
-
-    if (
-        summary.features.length
-    ) {
-        parts.push(
-            `features: ${summary.features.join(
-                ", "
-            )}`
-        );
-    }
-
-    if (
-        summary.databases.length
-    ) {
-        parts.push(
-            `databases: ${summary.databases.join(
-                ", "
-            )}`
-        );
-    }
-
-    return parts.join(". ");
 }
 
 module.exports =

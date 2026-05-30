@@ -1,6 +1,5 @@
 const fs = require("fs");
-
-const createAST = require("../shared/ast");
+const parser = require("@babel/parser");
 
 const extractImports = require("./imports");
 const extractExports = require("./exports");
@@ -8,24 +7,56 @@ const extractFunctions = require("./functions");
 const extractClasses = require("./classes");
 
 function parseJavaScript(file) {
-    const source = fs.readFileSync(
-        file,
-        "utf8"
-    );
+    const content =
+        fs.readFileSync(
+            file,
+            "utf8"
+        );
 
-    const ast = createAST(source);
+    const lines =
+        content.split(
+            /\r?\n/
+        );
+
+    const ast =
+        parser.parse(
+            content,
+            {
+                sourceType:
+                    "unambiguous",
+
+                plugins: [
+                    "jsx"
+                ]
+            }
+        );
 
     return {
         file,
 
-        imports: extractImports(ast),
+        imports:
+            extractImports(
+                ast
+            ),
 
-        exports: extractExports(ast),
+        exports:
+            extractExports(
+                ast
+            ),
 
-        functions: extractFunctions(ast),
+        functions:
+            extractFunctions(
+                ast,
+                lines
+            ),
 
-        classes: extractClasses(ast)
+        classes:
+            extractClasses(
+                ast,
+                lines
+            )
     };
 }
 
-module.exports = parseJavaScript;
+module.exports =
+    parseJavaScript;
