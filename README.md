@@ -1,7 +1,21 @@
 # read-code
 
+### Install Globally
+
 ```bash
 npm install -g read-code
+```
+
+### Install In A Project
+
+```bash
+npm install read-code
+```
+
+### Verify Installation
+
+```bash
+read-code --help
 ```
 
 ---
@@ -10,7 +24,7 @@ npm install -g read-code
 
 ### Turn Any Codebase Into AI Context
 
-**read-code** is an advanced code intelligence engine that scans entire projects, understands architecture, extracts code relationships, builds knowledge graphs, and generates AI-ready JSON context.
+**read-code** is an advanced code intelligence engine that scans entire projects, understands architecture, extracts relationships, builds knowledge graphs, and generates AI-ready JSON context.
 
 Instead of uploading hundreds of files and repeatedly explaining your project to AI, simply run:
 
@@ -18,11 +32,11 @@ Instead of uploading hundreds of files and repeatedly explaining your project to
 read-code scan
 ```
 
-and upload the generated context.
+and upload the generated JSON.
 
 ---
 
-## Created By
+# 👨‍💻 Author
 
 **Risk Chips**
 
@@ -30,32 +44,15 @@ and upload the generated context.
 
 # Why read-code?
 
-Most developers repeatedly tell AI:
-
-* What framework is used
-* Where routes are located
-* Which database is connected
-* How authentication works
-* Which files contain business logic
-* How components are connected
-* What the architecture looks like
-
-read-code automatically discovers and exports all of that information.
-
----
-
-# Example Workflow
-
-Without read-code:
+Normally:
 
 ```text
-Upload 500 files
-Explain project
+Upload project
 Explain architecture
-Explain auth
-Explain routes
 Explain database
-Explain business logic
+Explain routes
+Explain auth
+Explain features
 Repeat every conversation
 ```
 
@@ -64,42 +61,42 @@ With read-code:
 ```text
 read-code scan
 ↓
-project context generated
+Generate AI Context
 ↓
 Upload JSON
 ↓
-AI understands project
+AI Understands Project
 ```
 
 ---
 
-# Supported Languages
+# Supported Technologies
 
-## JavaScript
+### JavaScript
 
 ```js
 function login() {}
 ```
 
-## TypeScript
+### TypeScript
 
 ```ts
 interface User {}
 ```
 
-## React
+### React
 
 ```jsx
 function Navbar() {}
 ```
 
-## JSX
+### JSX
 
 ```jsx
 <App />
 ```
 
-## TSX
+### TSX
 
 ```tsx
 <App />
@@ -126,7 +123,7 @@ Builds:
 
 ```text
 Project Tree
-Project Statistics
+Statistics
 Framework Detection
 AI Context
 ```
@@ -172,17 +169,9 @@ Routes
 
 ---
 
-## Symbol Intelligence
+# Symbol Intelligence
 
-Builds:
-
-```text
-Function Symbols
-Class Symbols
-Component Symbols
-Type Symbols
-Enum Symbols
-```
+Builds a project-wide symbol table.
 
 Example:
 
@@ -191,17 +180,28 @@ Example:
   "login": {
     "type": "function",
     "file": "src/auth/login.js",
-    "startLine": 10,
-    "endLine": 50
+    "startLine": 12,
+    "endLine": 48
   }
 }
 ```
 
+Detects:
+
+```text
+Functions
+Classes
+Components
+Interfaces
+Types
+Enums
+```
+
 ---
 
-## Source Snippet Extraction
+# Source Snippet Extraction
 
-Stores source snippets for AI understanding.
+Stores implementation snippets.
 
 Example:
 
@@ -212,19 +212,18 @@ Example:
 }
 ```
 
-This significantly improves:
+This dramatically improves:
 
 ```text
 Bug Fixing
 Refactoring
-Code Generation
+Code Understanding
+AI Reasoning
 ```
 
 ---
 
 # Graph Engine
-
-Builds:
 
 ## Dependency Graph
 
@@ -258,15 +257,15 @@ Detects:
 
 ```text
 MVC
-Layered Architecture
 Repository Pattern
 Service Pattern
+Layered Architecture
 Component Architecture
 ```
 
 ---
 
-# Database Analysis
+# Database Detection
 
 Detects:
 
@@ -280,7 +279,7 @@ Redis
 
 ---
 
-# ORM Analysis
+# ORM Detection
 
 Detects:
 
@@ -293,15 +292,15 @@ TypeORM
 
 ---
 
-# Authentication Analysis
+# Authentication Detection
 
 Detects:
 
 ```text
 JWT
 Passport
-Session Auth
 OAuth
+Session Auth
 ```
 
 ---
@@ -313,19 +312,19 @@ Automatically discovers:
 ```text
 Authentication
 Dashboard
-Payments
 Messaging
 Notifications
+Payments
+Admin Panels
+File Uploads
 Search
-Admin Panel
-File Upload
 ```
 
 ---
 
 # AI Context Engine
 
-Produces structured JSON:
+Generates:
 
 ```json
 {
@@ -340,11 +339,23 @@ Produces structured JSON:
 }
 ```
 
+Perfect for:
+
+```text
+AI Agents
+Code Reviews
+Architecture Reviews
+Documentation
+Bug Fixing
+Refactoring
+Project Understanding
+```
+
 ---
 
 # Commands
 
-## Scan
+## Scan Project
 
 ```bash
 read-code scan
@@ -376,7 +387,7 @@ Produces minified JSON.
 
 ---
 
-## Exclude Directories
+## Exclude Folders
 
 ```bash
 read-code scan --exclude tests,docs
@@ -390,10 +401,10 @@ read-code scan --exclude tests,docs,coverage
 
 ---
 
-## Combine Flags
+## Combine Multiple Flags
 
 ```bash
-read-code scan --compact --savefile output.json
+read-code scan --savefile project.json --compact
 ```
 
 ```bash
@@ -404,7 +415,7 @@ read-code scan --exclude tests,docs --compact
 read-code scan --exclude tests,docs --compact --savefile output.json
 ```
 
-Flags can be used in any order.
+Flags work in any order.
 
 ---
 
@@ -459,7 +470,7 @@ read-code --help
 └── latest.json
 ```
 
-Generated after every scan.
+Generated automatically after every scan.
 
 ---
 
@@ -477,102 +488,7 @@ project.json
 
 ---
 
-# Current AI Capability
-
-## Project Understanding
-
-```text
-98%
-```
-
-## Architecture Understanding
-
-```text
-98%
-```
-
-## Documentation Generation
-
-```text
-98%
-```
-
-## Dependency Analysis
-
-```text
-95%
-```
-
-## Refactoring Assistance
-
-```text
-80%
-```
-
-## Bug Localization
-
-```text
-75%
-```
-
-## Code Search
-
-```text
-90%
-```
-
-## AI Readiness
-
-```text
-85%
-```
-
----
-
-# Roadmap
-
-## Quality Analysis
-
-Planned:
-
-```text
-Dead Code Detection
-Circular Dependency Detection
-Duplicate Code Detection
-```
-
----
-
-## Advanced Intelligence
-
-Planned:
-
-```text
-Cross-File Symbol Tracking
-Reference Tracking
-Semantic Search
-Variable Usage Analysis
-Data Flow Analysis
-Control Flow Analysis
-```
-
----
-
-## AI Enhancements
-
-Planned:
-
-```text
-Context Compression
-Semantic Embeddings
-AI Memory Packs
-Code Repair Suggestions
-Automatic Refactoring Plans
-```
-
----
-
-# Example
+# Example Workflow
 
 Generate context:
 
@@ -580,24 +496,77 @@ Generate context:
 read-code scan --savefile project.json
 ```
 
+Upload:
+
+```text
+project.json
+```
+
 Ask AI:
 
 ```text
-Find authentication flow
+Explain architecture
 
-Find unused services
+Find JWT validation
 
 Show login implementation
 
-Explain architecture
+Locate Prisma usage
+
+Find authentication flow
 
 Suggest refactoring opportunities
 
-Locate JWT validation
-
-Find Prisma usage
-
 Find database entry points
+
+Identify dead code
+```
+
+---
+
+# Current Capability
+
+| Capability                 | Accuracy |
+| -------------------------- | -------- |
+| Project Understanding      | 98%      |
+| Architecture Understanding | 98%      |
+| Documentation Generation   | 98%      |
+| Dependency Analysis        | 95%      |
+| Code Search                | 90%      |
+| Refactoring Assistance     | 80%      |
+| Bug Localization           | 75%      |
+| AI Readiness               | 85%      |
+
+---
+
+# Roadmap
+
+### Quality Analysis
+
+```text
+Dead Code Detection
+Circular Dependency Detection
+Duplicate Code Detection
+```
+
+### Advanced Intelligence
+
+```text
+Cross File Symbol Tracking
+Reference Tracking
+Variable Usage Analysis
+Data Flow Analysis
+Control Flow Analysis
+```
+
+### AI Enhancements
+
+```text
+Context Compression
+Semantic Search
+Embeddings
+AI Memory Packs
+Automatic Refactoring Plans
 ```
 
 ---
