@@ -1,0 +1,20 @@
+{
+  "name": "read-code",
+  "version": "1.0.0",
+  "description": "Universal code intelligence engine",
+  "main": "src/index.js",
+  "bin": {
+    "read-code": "./bin/read-code.js"
+  },
+  "scripts": {
+    "start": "node bin/read-code.js",
+    "scan": "node bin/read-code.js scan",
+    "watch": "node bin/read-code.js watch",
+    "graph": "node bin/read-code.js graph",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.7",
+    "@babel/traverse": "^7.29.7"
+  }
+}

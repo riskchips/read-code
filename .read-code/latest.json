@@ -1,0 +1,3606 @@
+{
+  "generatedAt": "2026-05-30T15:20:04.767Z",
+  "project": {
+    "name": "read-code",
+    "version": "1.0.0",
+    "license": null
+  },
+  "frameworks": [
+    "node"
+  ],
+  "statistics": {
+    "files": 91,
+    "javascript": 85,
+    "typescript": 0,
+    "jsx": 0,
+    "tsx": 0,
+    "json": 3,
+    "markdown": 1,
+    "other": 2
+  },
+  "tree": {
+    ".read-code": {
+      "latest.json": {}
+    },
+    ".readcoderc": {},
+    "bin": {
+      "read-code.js": {}
+    },
+    "LICENSE": {},
+    "package-lock.json": {},
+    "package.json": {},
+    "README.md": {},
+    "src": {
+      "analyzers": {
+        "api": {
+          "detectControllers.js": {},
+          "detectMiddleware.js": {},
+          "detectRoutes.js": {}
+        },
+        "architecture": {
+          "detectArchitecture.js": {},
+          "detectLayers.js": {},
+          "detectPatterns.js": {}
+        },
+        "auth": {
+          "detectAuth.js": {},
+          "detectProviders.js": {}
+        },
+        "database": {
+          "detectDatabase.js": {},
+          "detectModels.js": {},
+          "detectORM.js": {}
+        },
+        "features": {
+          "inferFeatures.js": {},
+          "inferFlows.js": {}
+        },
+        "framework": {
+          "detectFrameworks.js": {}
+        },
+        "quality": {
+          "circular.js": {},
+          "deadCode.js": {},
+          "duplicates.js": {}
+        }
+      },
+      "cache": {
+        "cacheManager.js": {},
+        "fingerprints.js": {}
+      },
+      "cli": {
+        "ai-context.js": {},
+        "createFile.js": {},
+        "explain.js": {},
+        "export.js": {},
+        "graph.js": {},
+        "index.js": {},
+        "query.js": {},
+        "scan.js": {},
+        "watch.js": {}
+      },
+      "exporters": {
+        "graphviz.js": {},
+        "html.js": {},
+        "json.js": {},
+        "markdown.js": {}
+      },
+      "graph": {
+        "buildGraph.js": {},
+        "callGraph.js": {},
+        "componentGraph.js": {},
+        "dependencyGraph.js": {},
+        "knowledgeGraph.js": {}
+      },
+      "index.js": {},
+      "intelligence": {
+        "aiContext.js": {},
+        "embeddings.js": {},
+        "projectSummary.js": {},
+        "queryEngine.js": {},
+        "search.js": {}
+      },
+      "parsers": {
+        "javascript": {
+          "classes.js": {},
+          "exports.js": {},
+          "functions.js": {},
+          "imports.js": {},
+          "parser.js": {}
+        },
+        "react": {
+          "components.js": {},
+          "hooks.js": {},
+          "parser.js": {},
+          "props.js": {},
+          "routes.js": {}
+        },
+        "shared": {
+          "ast.js": {},
+          "symbols.js": {},
+          "traverse.js": {}
+        },
+        "typescript": {
+          "enums.js": {},
+          "interfaces.js": {},
+          "parser.js": {},
+          "types.js": {}
+        }
+      },
+      "plugins": {
+        "javascript.js": {},
+        "nextjs.js": {},
+        "react.js": {},
+        "typescript.js": {}
+      },
+      "scanner": {
+        "buildTree.js": {},
+        "fileReader.js": {},
+        "hashFiles.js": {},
+        "ignoreRules.js": {},
+        "walkFiles.js": {}
+      },
+      "storage": {
+        "contextStore.js": {},
+        "graphStore.js": {},
+        "projectStore.js": {}
+      },
+      "utils": {
+        "constants.js": {},
+        "fs.js": {},
+        "helpers.js": {},
+        "logger.js": {},
+        "paths.js": {}
+      }
+    },
+    "test-parser.js": {},
+    "test-react.js": {},
+    "tests": {
+      "analyzer.test.js": {},
+      "cli.test.js": {},
+      "graph.test.js": {},
+      "parser.test.js": {},
+      "scanner.test.js": {}
+    }
+  },
+  "projectSummary": {
+    "project": "read-code",
+    "frameworks": [
+      "node"
+    ],
+    "statistics": {
+      "files": 91,
+      "javascript": 85,
+      "typescript": 0,
+      "jsx": 0,
+      "tsx": 0,
+      "json": 3,
+      "markdown": 1,
+      "other": 2
+    },
+    "architecture": {
+      "layers": {
+        "controllers": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js"
+        ],
+        "services": [],
+        "models": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js"
+        ],
+        "repositories": [],
+        "middleware": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js"
+        ],
+        "routes": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js"
+        ],
+        "components": [],
+        "utilities": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\constants.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\fs.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\helpers.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\logger.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\paths.js"
+        ]
+      },
+      "patterns": []
+    },
+    "features": [
+      "authentication",
+      "search"
+    ],
+    "databases": [],
+    "auth": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "source": "../analyzers/auth/detectAuth"
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "source": "../analyzers/auth/detectProviders"
+      }
+    ],
+    "routes": 2,
+    "controllers": 1,
+    "models": 0,
+    "description": "Project read-code. uses node. features: authentication, search"
+  },
+  "summary": {
+    "phase": "phase-5",
+    "status": "intelligence-enabled"
+  },
+  "analysis": {
+    "imports": [
+      {
+        "source": "../src/cli",
+        "type": "require"
+      },
+      {
+        "source": "./detectLayers",
+        "type": "require"
+      },
+      {
+        "source": "./detectPatterns",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "path",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "path",
+        "type": "require"
+      },
+      {
+        "source": "../storage/projectStore",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "./scan",
+        "type": "require"
+      },
+      {
+        "source": "./query",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "../intelligence/queryEngine",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "path",
+        "type": "require"
+      },
+      {
+        "source": "../scanner/walkFiles",
+        "type": "require"
+      },
+      {
+        "source": "../scanner/buildTree",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/framework/detectFrameworks",
+        "type": "require"
+      },
+      {
+        "source": "../intelligence/aiContext",
+        "type": "require"
+      },
+      {
+        "source": "../parsers/javascript/parser",
+        "type": "require"
+      },
+      {
+        "source": "../parsers/typescript/parser",
+        "type": "require"
+      },
+      {
+        "source": "../parsers/react/parser",
+        "type": "require"
+      },
+      {
+        "source": "../graph/buildGraph",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/api/detectRoutes",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/api/detectControllers",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/api/detectMiddleware",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/database/detectDatabase",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/database/detectORM",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/database/detectModels",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/auth/detectAuth",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/auth/detectProviders",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/architecture/detectArchitecture",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/features/inferFeatures",
+        "type": "require"
+      },
+      {
+        "source": "../analyzers/features/inferFlows",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "../parsers/shared/ast",
+        "type": "require"
+      },
+      {
+        "source": "./dependencyGraph",
+        "type": "require"
+      },
+      {
+        "source": "./callGraph",
+        "type": "require"
+      },
+      {
+        "source": "./componentGraph",
+        "type": "require"
+      },
+      {
+        "source": "./knowledgeGraph",
+        "type": "require"
+      },
+      {
+        "source": "../parsers/shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../parsers/shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "./cli/scan",
+        "type": "require"
+      },
+      {
+        "source": "./projectSummary",
+        "type": "require"
+      },
+      {
+        "source": "./search",
+        "type": "require"
+      },
+      {
+        "source": "./embeddings",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "../shared/ast",
+        "type": "require"
+      },
+      {
+        "source": "./imports",
+        "type": "require"
+      },
+      {
+        "source": "./exports",
+        "type": "require"
+      },
+      {
+        "source": "./functions",
+        "type": "require"
+      },
+      {
+        "source": "./classes",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "../shared/ast",
+        "type": "require"
+      },
+      {
+        "source": "./components",
+        "type": "require"
+      },
+      {
+        "source": "./hooks",
+        "type": "require"
+      },
+      {
+        "source": "./props",
+        "type": "require"
+      },
+      {
+        "source": "./routes",
+        "type": "require"
+      },
+      {
+        "source": "../javascript/imports",
+        "type": "require"
+      },
+      {
+        "source": "../javascript/exports",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "@babel/parser",
+        "type": "require"
+      },
+      {
+        "source": "@babel/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "../shared/ast",
+        "type": "require"
+      },
+      {
+        "source": "./interfaces",
+        "type": "require"
+      },
+      {
+        "source": "./types",
+        "type": "require"
+      },
+      {
+        "source": "./enums",
+        "type": "require"
+      },
+      {
+        "source": "../javascript/imports",
+        "type": "require"
+      },
+      {
+        "source": "../javascript/exports",
+        "type": "require"
+      },
+      {
+        "source": "../javascript/functions",
+        "type": "require"
+      },
+      {
+        "source": "../javascript/classes",
+        "type": "require"
+      },
+      {
+        "source": "../shared/traverse",
+        "type": "require"
+      },
+      {
+        "source": "path",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "path",
+        "type": "require"
+      },
+      {
+        "source": "./ignoreRules",
+        "type": "require"
+      },
+      {
+        "source": "fs",
+        "type": "require"
+      },
+      {
+        "source": "path",
+        "type": "require"
+      },
+      {
+        "source": "./src/intelligence/queryEngine",
+        "type": "require"
+      },
+      {
+        "source": "./output.json",
+        "type": "require"
+      },
+      {
+        "source": "./src/parsers/react/parser",
+        "type": "require"
+      }
+    ],
+    "exports": [],
+    "functions": [
+      {
+        "name": "detectControllers",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectMiddleware",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectRoutes",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectArchitecture",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectLayers",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectPatterns",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "detectAuth",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectProviders",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectDatabase",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectModels",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "detectORM",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "inferFeatures",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "inferFlows",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "detectFrameworks",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "createFile",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "explain",
+        "async": false,
+        "generator": false,
+        "params": 0,
+        "type": "declaration"
+      },
+      {
+        "name": "query",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "parseOptions",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "ensureCacheDir",
+        "async": false,
+        "generator": false,
+        "params": 0,
+        "type": "declaration"
+      },
+      {
+        "name": "getProjectInfo",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildStatistics",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "analyzeFiles",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "scan",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildGraph",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildCallGraph",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "buildComponentGraph",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildDependencyGraph",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildKnowledgeGraph",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "aiContext",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "tokenize",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "createEmbedding",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "similarity",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "projectSummary",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildDescription",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "queryEngine",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "buildSearchIndex",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "search",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "extractClasses",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractExports",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractFunctions",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractImports",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "parseJavaScript",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractComponents",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractHooks",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "parseReact",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractProps",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractRoutes",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "createAST",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractEnums",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractInterfaces",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "parseTypeScript",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "extractTypes",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "buildTree",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "shouldIgnore",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "walkFiles",
+        "async": false,
+        "generator": false,
+        "params": 2,
+        "type": "declaration"
+      },
+      {
+        "name": "ensureStore",
+        "async": false,
+        "generator": false,
+        "params": 0,
+        "type": "declaration"
+      },
+      {
+        "name": "getStore",
+        "async": false,
+        "generator": false,
+        "params": 0,
+        "type": "declaration"
+      },
+      {
+        "name": "saveStore",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      },
+      {
+        "name": "registerFile",
+        "async": false,
+        "generator": false,
+        "params": 1,
+        "type": "declaration"
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "types": [],
+    "enums": [],
+    "components": [],
+    "hooks": [],
+    "props": [],
+    "routes": []
+  },
+  "graphs": {
+    "generatedAt": "2026-05-30T15:20:04.764Z",
+    "nodes": [
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\bin\\read-code.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js"
+      },
+      {
+        "type": "function",
+        "name": "detectControllers",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js"
+      },
+      {
+        "type": "function",
+        "name": "detectMiddleware",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js"
+      },
+      {
+        "type": "function",
+        "name": "detectRoutes",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js"
+      },
+      {
+        "type": "function",
+        "name": "detectArchitecture",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectLayers.js"
+      },
+      {
+        "type": "function",
+        "name": "detectLayers",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectLayers.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectPatterns.js"
+      },
+      {
+        "type": "function",
+        "name": "detectPatterns",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectPatterns.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js"
+      },
+      {
+        "type": "function",
+        "name": "detectAuth",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectProviders.js"
+      },
+      {
+        "type": "function",
+        "name": "detectProviders",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectProviders.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectDatabase.js"
+      },
+      {
+        "type": "function",
+        "name": "detectDatabase",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectDatabase.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js"
+      },
+      {
+        "type": "function",
+        "name": "detectModels",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectORM.js"
+      },
+      {
+        "type": "function",
+        "name": "detectORM",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectORM.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFeatures.js"
+      },
+      {
+        "type": "function",
+        "name": "inferFeatures",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFeatures.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFlows.js"
+      },
+      {
+        "type": "function",
+        "name": "inferFlows",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFlows.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js"
+      },
+      {
+        "type": "function",
+        "name": "detectFrameworks",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\circular.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\deadCode.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\duplicates.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\cacheManager.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\fingerprints.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\ai-context.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js"
+      },
+      {
+        "type": "function",
+        "name": "createFile",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js"
+      },
+      {
+        "type": "function",
+        "name": "explain",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\export.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\graph.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\index.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js"
+      },
+      {
+        "type": "function",
+        "name": "query",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "function",
+        "name": "parseOptions",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "function",
+        "name": "ensureCacheDir",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "function",
+        "name": "getProjectInfo",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "function",
+        "name": "buildStatistics",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "function",
+        "name": "analyzeFiles",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "function",
+        "name": "scan",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\watch.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\graphviz.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\html.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\json.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\markdown.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js"
+      },
+      {
+        "type": "function",
+        "name": "buildGraph",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js"
+      },
+      {
+        "type": "function",
+        "name": "buildCallGraph",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js"
+      },
+      {
+        "type": "function",
+        "name": "buildComponentGraph",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\dependencyGraph.js"
+      },
+      {
+        "type": "function",
+        "name": "buildDependencyGraph",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\dependencyGraph.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\knowledgeGraph.js"
+      },
+      {
+        "type": "function",
+        "name": "buildKnowledgeGraph",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\knowledgeGraph.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\index.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js"
+      },
+      {
+        "type": "function",
+        "name": "aiContext",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js"
+      },
+      {
+        "type": "function",
+        "name": "tokenize",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js"
+      },
+      {
+        "type": "function",
+        "name": "createEmbedding",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js"
+      },
+      {
+        "type": "function",
+        "name": "similarity",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js"
+      },
+      {
+        "type": "function",
+        "name": "projectSummary",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js"
+      },
+      {
+        "type": "function",
+        "name": "buildDescription",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js"
+      },
+      {
+        "type": "function",
+        "name": "queryEngine",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js"
+      },
+      {
+        "type": "function",
+        "name": "buildSearchIndex",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js"
+      },
+      {
+        "type": "function",
+        "name": "search",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js"
+      },
+      {
+        "type": "function",
+        "name": "extractClasses",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\exports.js"
+      },
+      {
+        "type": "function",
+        "name": "extractExports",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\exports.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js"
+      },
+      {
+        "type": "function",
+        "name": "extractFunctions",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js"
+      },
+      {
+        "type": "function",
+        "name": "extractImports",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js"
+      },
+      {
+        "type": "function",
+        "name": "parseJavaScript",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js"
+      },
+      {
+        "type": "function",
+        "name": "extractComponents",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js"
+      },
+      {
+        "type": "function",
+        "name": "extractHooks",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js"
+      },
+      {
+        "type": "function",
+        "name": "parseReact",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js"
+      },
+      {
+        "type": "function",
+        "name": "extractProps",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js"
+      },
+      {
+        "type": "function",
+        "name": "extractRoutes",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js"
+      },
+      {
+        "type": "function",
+        "name": "createAST",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\symbols.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\traverse.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js"
+      },
+      {
+        "type": "function",
+        "name": "extractEnums",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js"
+      },
+      {
+        "type": "function",
+        "name": "extractInterfaces",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js"
+      },
+      {
+        "type": "function",
+        "name": "parseTypeScript",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js"
+      },
+      {
+        "type": "function",
+        "name": "extractTypes",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\javascript.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\nextjs.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\react.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\typescript.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js"
+      },
+      {
+        "type": "function",
+        "name": "buildTree",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\fileReader.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\hashFiles.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\ignoreRules.js"
+      },
+      {
+        "type": "function",
+        "name": "shouldIgnore",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\ignoreRules.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js"
+      },
+      {
+        "type": "function",
+        "name": "walkFiles",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\contextStore.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\graphStore.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js"
+      },
+      {
+        "type": "function",
+        "name": "ensureStore",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js"
+      },
+      {
+        "type": "function",
+        "name": "getStore",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js"
+      },
+      {
+        "type": "function",
+        "name": "saveStore",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js"
+      },
+      {
+        "type": "function",
+        "name": "registerFile",
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\constants.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\fs.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\helpers.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\logger.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\paths.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-parser.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-react.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\analyzer.test.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\cli.test.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\graph.test.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\parser.test.js"
+      },
+      {
+        "type": "file",
+        "name": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\scanner.test.js"
+      }
+    ],
+    "edges": [
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\bin\\read-code.js",
+        "to": "../src/cli"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js",
+        "to": "detectControllers"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js",
+        "to": "detectMiddleware"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js",
+        "to": "detectRoutes"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js",
+        "to": "./detectLayers"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js",
+        "to": "./detectPatterns"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js",
+        "to": "detectArchitecture"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectLayers.js",
+        "to": "detectLayers"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectPatterns.js",
+        "to": "detectPatterns"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js",
+        "to": "detectAuth"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectProviders.js",
+        "to": "detectProviders"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectDatabase.js",
+        "to": "detectDatabase"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js",
+        "to": "detectModels"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectORM.js",
+        "to": "detectORM"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFeatures.js",
+        "to": "inferFeatures"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFlows.js",
+        "to": "inferFlows"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js",
+        "to": "path"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js",
+        "to": "detectFrameworks"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js",
+        "to": "path"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js",
+        "to": "../storage/projectStore"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js",
+        "to": "createFile"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js",
+        "to": "fs"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js",
+        "to": "explain"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\index.js",
+        "to": "./scan"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\index.js",
+        "to": "./query"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js",
+        "to": "../intelligence/queryEngine"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js",
+        "to": "query"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "path"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../scanner/walkFiles"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../scanner/buildTree"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/framework/detectFrameworks"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../intelligence/aiContext"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../parsers/javascript/parser"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../parsers/typescript/parser"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../parsers/react/parser"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../graph/buildGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/api/detectRoutes"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/api/detectControllers"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/api/detectMiddleware"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/database/detectDatabase"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/database/detectORM"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/database/detectModels"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/auth/detectAuth"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/auth/detectProviders"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/architecture/detectArchitecture"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/features/inferFeatures"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "../analyzers/features/inferFlows"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "parseOptions"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "ensureCacheDir"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "getProjectInfo"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "buildStatistics"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "analyzeFiles"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "to": "scan"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "../parsers/shared/ast"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "./dependencyGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "./callGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "./componentGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "./knowledgeGraph"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "to": "buildGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js",
+        "to": "../parsers/shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js",
+        "to": "buildCallGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js",
+        "to": "../parsers/shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js",
+        "to": "buildComponentGraph"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\dependencyGraph.js",
+        "to": "buildDependencyGraph"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\knowledgeGraph.js",
+        "to": "buildKnowledgeGraph"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\index.js",
+        "to": "./cli/scan"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js",
+        "to": "./projectSummary"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js",
+        "to": "aiContext"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js",
+        "to": "tokenize"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js",
+        "to": "createEmbedding"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js",
+        "to": "similarity"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js",
+        "to": "projectSummary"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js",
+        "to": "buildDescription"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js",
+        "to": "./search"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js",
+        "to": "queryEngine"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js",
+        "to": "./embeddings"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js",
+        "to": "buildSearchIndex"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js",
+        "to": "search"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js",
+        "to": "extractClasses"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\exports.js",
+        "to": "extractExports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js",
+        "to": "extractFunctions"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js",
+        "to": "extractImports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "../shared/ast"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "./imports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "./exports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "./functions"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "./classes"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "to": "parseJavaScript"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js",
+        "to": "extractComponents"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js",
+        "to": "extractHooks"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "../shared/ast"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "./components"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "./hooks"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "./props"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "./routes"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "../javascript/imports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "../javascript/exports"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "to": "parseReact"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js",
+        "to": "extractProps"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js",
+        "to": "extractRoutes"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js",
+        "to": "@babel/parser"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js",
+        "to": "createAST"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\traverse.js",
+        "to": "@babel/traverse"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js",
+        "to": "extractEnums"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js",
+        "to": "extractInterfaces"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "../shared/ast"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "./interfaces"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "./types"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "./enums"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "../javascript/imports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "../javascript/exports"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "../javascript/functions"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "../javascript/classes"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "to": "parseTypeScript"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js",
+        "to": "../shared/traverse"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js",
+        "to": "extractTypes"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js",
+        "to": "path"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js",
+        "to": "buildTree"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\ignoreRules.js",
+        "to": "shouldIgnore"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js",
+        "to": "path"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js",
+        "to": "./ignoreRules"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js",
+        "to": "walkFiles"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "to": "fs"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "to": "path"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "to": "ensureStore"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "to": "getStore"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "to": "saveStore"
+      },
+      {
+        "type": "contains",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "to": "registerFile"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-parser.js",
+        "to": "./src/intelligence/queryEngine"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-parser.js",
+        "to": "./output.json"
+      },
+      {
+        "type": "imports",
+        "from": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-react.js",
+        "to": "./src/parsers/react/parser"
+      }
+    ],
+    "dependencyGraph": {
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\bin\\read-code.js": [
+        "../src/cli"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js": [
+        "./detectLayers",
+        "./detectPatterns"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectLayers.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectPatterns.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectProviders.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectDatabase.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectORM.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFeatures.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFlows.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js": [
+        "fs",
+        "path"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\circular.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\deadCode.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\duplicates.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\cacheManager.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\fingerprints.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\ai-context.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js": [
+        "fs",
+        "path",
+        "../storage/projectStore"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js": [
+        "fs"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\export.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\graph.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\index.js": [
+        "./scan",
+        "./query"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js": [
+        "fs",
+        "../intelligence/queryEngine"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js": [
+        "fs",
+        "path",
+        "../scanner/walkFiles",
+        "../scanner/buildTree",
+        "../analyzers/framework/detectFrameworks",
+        "../intelligence/aiContext",
+        "../parsers/javascript/parser",
+        "../parsers/typescript/parser",
+        "../parsers/react/parser",
+        "../graph/buildGraph",
+        "../analyzers/api/detectRoutes",
+        "../analyzers/api/detectControllers",
+        "../analyzers/api/detectMiddleware",
+        "../analyzers/database/detectDatabase",
+        "../analyzers/database/detectORM",
+        "../analyzers/database/detectModels",
+        "../analyzers/auth/detectAuth",
+        "../analyzers/auth/detectProviders",
+        "../analyzers/architecture/detectArchitecture",
+        "../analyzers/features/inferFeatures",
+        "../analyzers/features/inferFlows"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\watch.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\graphviz.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\html.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\json.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\markdown.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js": [
+        "fs",
+        "../parsers/shared/ast",
+        "./dependencyGraph",
+        "./callGraph",
+        "./componentGraph",
+        "./knowledgeGraph"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js": [
+        "../parsers/shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js": [
+        "../parsers/shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\dependencyGraph.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\knowledgeGraph.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\index.js": [
+        "./cli/scan"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js": [
+        "./projectSummary"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js": [
+        "./search"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js": [
+        "./embeddings"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\exports.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js": [
+        "fs",
+        "../shared/ast",
+        "./imports",
+        "./exports",
+        "./functions",
+        "./classes"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js": [
+        "fs",
+        "../shared/ast",
+        "./components",
+        "./hooks",
+        "./props",
+        "./routes",
+        "../javascript/imports",
+        "../javascript/exports"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js": [
+        "@babel/parser"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\symbols.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\traverse.js": [
+        "@babel/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js": [
+        "fs",
+        "../shared/ast",
+        "./interfaces",
+        "./types",
+        "./enums",
+        "../javascript/imports",
+        "../javascript/exports",
+        "../javascript/functions",
+        "../javascript/classes"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js": [
+        "../shared/traverse"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\javascript.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\nextjs.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\react.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\typescript.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js": [
+        "path"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\fileReader.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\hashFiles.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\ignoreRules.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js": [
+        "fs",
+        "path",
+        "./ignoreRules"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\contextStore.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\graphStore.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js": [
+        "fs",
+        "path"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\constants.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\fs.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\helpers.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\logger.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\paths.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-parser.js": [
+        "./src/intelligence/queryEngine",
+        "./output.json"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-react.js": [
+        "./src/parsers/react/parser"
+      ],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\analyzer.test.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\cli.test.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\graph.test.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\parser.test.js": [],
+      "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\scanner.test.js": []
+    },
+    "callGraphs": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\bin\\read-code.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js",
+        "graph": {
+          "detectControllers": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js",
+        "graph": {
+          "detectMiddleware": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js",
+        "graph": {
+          "detectRoutes": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js",
+        "graph": {
+          "detectArchitecture": [
+            "detectLayers",
+            "detectPatterns"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectLayers.js",
+        "graph": {
+          "detectLayers": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectPatterns.js",
+        "graph": {
+          "detectPatterns": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js",
+        "graph": {
+          "detectAuth": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectProviders.js",
+        "graph": {
+          "detectProviders": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectDatabase.js",
+        "graph": {
+          "detectDatabase": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js",
+        "graph": {
+          "detectModels": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectORM.js",
+        "graph": {
+          "detectORM": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFeatures.js",
+        "graph": {
+          "inferFeatures": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFlows.js",
+        "graph": {
+          "inferFlows": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js",
+        "graph": {
+          "detectFrameworks": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\circular.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\deadCode.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\duplicates.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\cacheManager.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\fingerprints.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\ai-context.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js",
+        "graph": {
+          "createFile": [
+            "registerFile"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js",
+        "graph": {
+          "explain": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\export.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\graph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\index.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js",
+        "graph": {
+          "query": [
+            "queryEngine"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "graph": {
+          "parseOptions": [],
+          "ensureCacheDir": [],
+          "getProjectInfo": [],
+          "buildStatistics": [],
+          "analyzeFiles": [
+            "parseJavaScript",
+            "parseTypeScript",
+            "parseReact"
+          ],
+          "scan": [
+            "parseOptions",
+            "walkFiles",
+            "buildTree",
+            "getProjectInfo",
+            "detectFrameworks",
+            "buildStatistics",
+            "analyzeFiles",
+            "buildGraph",
+            "detectRoutes",
+            "detectControllers",
+            "detectMiddleware",
+            "detectDatabase",
+            "detectORM",
+            "detectModels",
+            "detectAuth",
+            "detectProviders",
+            "detectArchitecture",
+            "inferFeatures",
+            "inferFlows",
+            "aiContext",
+            "ensureCacheDir"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\watch.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\graphviz.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\html.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\json.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\markdown.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "graph": {
+          "buildGraph": [
+            "buildDependencyGraph",
+            "createAST",
+            "buildCallGraph",
+            "buildComponentGraph",
+            "buildKnowledgeGraph"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js",
+        "graph": {
+          "buildCallGraph": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js",
+        "graph": {
+          "buildComponentGraph": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\dependencyGraph.js",
+        "graph": {
+          "buildDependencyGraph": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\knowledgeGraph.js",
+        "graph": {
+          "buildKnowledgeGraph": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\index.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js",
+        "graph": {
+          "aiContext": [
+            "projectSummary"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js",
+        "graph": {
+          "tokenize": [
+            "String"
+          ],
+          "createEmbedding": [
+            "tokenize"
+          ],
+          "similarity": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js",
+        "graph": {
+          "projectSummary": [
+            "buildDescription"
+          ],
+          "buildDescription": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js",
+        "graph": {
+          "queryEngine": [
+            "String",
+            "search"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js",
+        "graph": {
+          "buildSearchIndex": [
+            "createEmbedding"
+          ],
+          "search": [
+            "createEmbedding",
+            "buildSearchIndex",
+            "similarity"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js",
+        "graph": {
+          "extractClasses": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\exports.js",
+        "graph": {
+          "extractExports": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js",
+        "graph": {
+          "extractFunctions": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js",
+        "graph": {
+          "extractImports": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "graph": {
+          "parseJavaScript": [
+            "createAST",
+            "extractImports",
+            "extractExports",
+            "extractFunctions",
+            "extractClasses"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js",
+        "graph": {
+          "extractComponents": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js",
+        "graph": {
+          "extractHooks": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "graph": {
+          "parseReact": [
+            "createAST",
+            "extractImports",
+            "extractExports",
+            "extractComponents",
+            "extractHooks",
+            "extractProps",
+            "extractRoutes"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js",
+        "graph": {
+          "extractProps": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js",
+        "graph": {
+          "extractRoutes": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js",
+        "graph": {
+          "createAST": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\symbols.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\traverse.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js",
+        "graph": {
+          "extractEnums": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js",
+        "graph": {
+          "extractInterfaces": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "graph": {
+          "parseTypeScript": [
+            "createAST",
+            "extractImports",
+            "extractExports",
+            "extractFunctions",
+            "extractClasses",
+            "extractInterfaces",
+            "extractTypes",
+            "extractEnums"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js",
+        "graph": {
+          "extractTypes": [
+            "traverse"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\javascript.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\nextjs.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\react.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\typescript.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js",
+        "graph": {
+          "buildTree": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\fileReader.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\hashFiles.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\ignoreRules.js",
+        "graph": {
+          "shouldIgnore": []
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js",
+        "graph": {
+          "walkFiles": [
+            "shouldIgnore",
+            "walkFiles"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\contextStore.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\graphStore.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "graph": {
+          "ensureStore": [],
+          "getStore": [
+            "ensureStore"
+          ],
+          "saveStore": [
+            "ensureStore"
+          ],
+          "registerFile": [
+            "getStore",
+            "saveStore"
+          ]
+        }
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\constants.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\fs.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\helpers.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\logger.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\paths.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-parser.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-react.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\analyzer.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\cli.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\graph.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\parser.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\scanner.test.js",
+        "graph": {}
+      }
+    ],
+    "componentGraphs": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\bin\\read-code.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectArchitecture.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectLayers.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\architecture\\detectPatterns.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectProviders.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectDatabase.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectORM.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFeatures.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\features\\inferFlows.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\framework\\detectFrameworks.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\circular.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\deadCode.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\quality\\duplicates.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\cacheManager.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cache\\fingerprints.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\ai-context.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\createFile.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\explain.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\export.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\graph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\index.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\query.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\watch.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\graphviz.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\html.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\json.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\exporters\\markdown.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\buildGraph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\callGraph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\componentGraph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\dependencyGraph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\graph\\knowledgeGraph.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\index.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\aiContext.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\embeddings.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\projectSummary.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\queryEngine.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\intelligence\\search.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\classes.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\exports.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\functions.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\imports.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\javascript\\parser.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\components.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\hooks.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\parser.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\props.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\ast.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\symbols.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\shared\\traverse.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\enums.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\interfaces.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\parser.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\typescript\\types.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\javascript.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\nextjs.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\react.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\plugins\\typescript.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\buildTree.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\fileReader.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\hashFiles.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\ignoreRules.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\scanner\\walkFiles.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\contextStore.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\graphStore.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\storage\\projectStore.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\constants.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\fs.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\helpers.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\logger.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\paths.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-parser.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\test-react.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\analyzer.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\cli.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\graph.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\parser.test.js",
+        "graph": {}
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\tests\\scanner.test.js",
+        "graph": {}
+      }
+    ]
+  },
+  "analyzers": {
+    "routes": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js",
+        "function": "detectRoutes"
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js",
+        "function": "extractRoutes"
+      }
+    ],
+    "controllers": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js"
+      }
+    ],
+    "middleware": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js",
+        "function": "detectMiddleware"
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\auth\\detectAuth.js",
+        "function": "detectAuth"
+      }
+    ],
+    "database": [],
+    "orms": [],
+    "models": [],
+    "auth": [
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "source": "../analyzers/auth/detectAuth"
+      },
+      {
+        "file": "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\cli\\scan.js",
+        "source": "../analyzers/auth/detectProviders"
+      }
+    ],
+    "providers": [],
+    "architecture": {
+      "layers": {
+        "controllers": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectControllers.js"
+        ],
+        "services": [],
+        "models": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\database\\detectModels.js"
+        ],
+        "repositories": [],
+        "middleware": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectMiddleware.js"
+        ],
+        "routes": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\analyzers\\api\\detectRoutes.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\parsers\\react\\routes.js"
+        ],
+        "components": [],
+        "utilities": [
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\constants.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\fs.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\helpers.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\logger.js",
+          "C:\\Users\\8c12a\\OneDrive\\Desktop\\mvp module\\src\\utils\\paths.js"
+        ]
+      },
+      "patterns": []
+    },
+    "features": [
+      "authentication",
+      "search"
+    ],
+    "flows": [
+      {
+        "name": "user-auth-flow",
+        "steps": [
+          "register",
+          "login",
+          "authenticated"
+        ]
+      }
+    ]
+  }
+}
